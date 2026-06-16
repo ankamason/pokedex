@@ -23,10 +23,12 @@ export function initState(): State {
     prompt: "Pokedex > ",
   });
 
+  const cacheInterval = 1000 * 60 * 5; // 5 minutes in milliseconds
+
   return {
     rl,
     commands: getCommands(),
-    pokeapi: new PokeAPI(),
+    pokeapi: new PokeAPI(cacheInterval),
     nextLocationsURL: null,
     prevLocationsURL: null,
   };
