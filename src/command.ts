@@ -3,3 +3,4 @@ export type CLICommand = {
   description: string;
   callback: (commands: Record<string, CLICommand>) => void;
 };
+
